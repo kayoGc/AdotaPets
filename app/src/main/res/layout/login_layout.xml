@@ -15,7 +15,10 @@
             android:id="@+id/imgLogo"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_margin="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="50dp"
             android:scaleType="centerCrop"
             android:src="@drawable/gato" />
 
@@ -36,23 +39,31 @@
             android:drawableEnd="@drawable/baselinelock"
             android:hint="Insira a senha do usuário" />
 
-        <Button
-            android:id="@+id/btnEntrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@+id/edtSenha"
-            android:layout_marginLeft="20dp"
-            android:text="Entrar" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnSair"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtSenha"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/btnEntrar"
-            android:text="Sair" />
+            <Button
+                android:id="@+id/btnEntrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtSenha"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="Entrar" />
 
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtSenha"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/btnEntrar"
+                android:layout_weight="1"
+                android:text="Sair" />
 
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
